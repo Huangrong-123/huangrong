@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <meta charset="utf-8"  /> 
+           <title>用户登录</title>
+           <link href="css/login.css" rel="stylensheet"  />
+           <script src="js/login.js"></script>
+<style type="text/css">
+ body{
+				background-image: url(images/bg7.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;/* 自适应窗口，会把图片拉伸足够大，但是部分图片会显示不全 */
+			}
+			#content{
+				margin: auto;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				/* border: 1px solid red; */
+				border-radius: 20px;
+				background: #fffae8;
+				width: 350px;
+				height: 150px;
+				text-align: center;
+				
+			}
+ </style>
+           
+</head>
+
+
+<body>
+<div id="content">
+<form action="LoginServlet"  method="post">
+              用户名：<input  type="text"   name="uname"  ><br/>
+              密&emsp;码：<input type="password"  name="password"  ><br/>
+              验证码：<input type="text"  name="vcode"  ><br/>
+                   <div   class="ccimg">
+                        <a  href="javascript:void(0);" class=""   onclick="changeCode()">
+                        <img src="CreateVerifyCodeImageServlet"  id="image" border="0" width="100" height="40"  title="看不清，换一个" /> <br/>
+                        </a>
+                   </div>
+                <input  type="submit"  name="tj"  value="登录"   class="button">    
+</form>
+</div>
+</body>
+</html>
